@@ -1,0 +1,25 @@
+/*UNIT 2   QUESTION 3
+Problem Description:
+Benitta is a School teacher. She has conducted n number of class tests to her students. For
+the internal marks, she has to consider only the best two marks. Help her to automate the
+process by writing a C program.*/
+
+
+#include <stdio.h>
+
+int main()
+{
+   int n,top1=0,top2=0,i,input;
+   scanf("%d",&n);
+   for(i=0;i<n;i++){
+       scanf("%d",&input);
+       if(top1<input){
+           top2=top1;
+           top1=input;
+       }else if(top2<input){
+           top2=input;
+       }
+   }
+    printf("Marks: \n    1st Top: %d\n    2nd Top: %d",top1,top2);
+    return 0;
+}
